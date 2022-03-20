@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: fct_play_by_play
+    description: "Fact table for play by play records."

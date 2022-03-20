@@ -1,0 +1,850 @@
+
+
+============================== 2022-03-19 16:05:06.824658 | e4bbd005-9b3b-4ff2-8dbb-08c350ff69ad ==============================
+16:05:06.824658 [info ] [MainThread]: Running with dbt=1.0.4
+16:05:06.825359 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/gkaufman/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+16:05:06.825603 [debug] [MainThread]: Tracking: tracking
+16:05:06.840395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11022d8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11022d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11022d640>]}
+16:05:06.860002 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+16:05:06.860343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e4bbd005-9b3b-4ff2-8dbb-08c350ff69ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11022d4f0>]}
+16:05:06.877836 [debug] [MainThread]: Parsing macros/etc.sql
+16:05:06.881345 [debug] [MainThread]: Parsing macros/catalog.sql
+16:05:06.888760 [debug] [MainThread]: Parsing macros/adapters.sql
+16:05:06.922175 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+16:05:06.925221 [debug] [MainThread]: Parsing macros/materializations/view.sql
+16:05:06.928204 [debug] [MainThread]: Parsing macros/materializations/table.sql
+16:05:06.932831 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+16:05:06.935971 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+16:05:06.959213 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+16:05:06.961185 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+16:05:06.965593 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+16:05:06.968224 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+16:05:06.970307 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+16:05:06.990576 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+16:05:07.009767 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+16:05:07.024351 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+16:05:07.029598 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+16:05:07.031617 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+16:05:07.033665 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+16:05:07.039361 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+16:05:07.058527 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+16:05:07.060347 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+16:05:07.072897 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+16:05:07.092219 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+16:05:07.107035 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+16:05:07.110463 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+16:05:07.119163 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+16:05:07.120814 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+16:05:07.124137 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+16:05:07.126816 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+16:05:07.133938 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+16:05:07.159875 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+16:05:07.161945 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+16:05:07.164822 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+16:05:07.166634 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+16:05:07.167653 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+16:05:07.168293 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+16:05:07.169110 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+16:05:07.170796 [debug] [MainThread]: Parsing macros/etc/statement.sql
+16:05:07.176172 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+16:05:07.186349 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+16:05:07.189186 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+16:05:07.192333 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+16:05:07.209949 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+16:05:07.213407 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+16:05:07.218802 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+16:05:07.230001 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+16:05:07.242074 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+16:05:07.533373 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+16:05:07.587969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e4bbd005-9b3b-4ff2-8dbb-08c350ff69ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11031bf40>]}
+16:05:07.594940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e4bbd005-9b3b-4ff2-8dbb-08c350ff69ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102f12e0>]}
+16:05:07.595505 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+16:05:07.597735 [info ] [MainThread]: 
+16:05:07.598719 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:05:07.600087 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+16:05:07.600637 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:05:08.326225 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+16:05:08.326525 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+16:05:08.927039 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+16:05:08.927393 [info ] [MainThread]: 
+16:05:08.931478 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+16:05:08.931758 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+16:05:08.932208 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+16:05:08.932376 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+16:05:08.932548 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+16:05:08.935338 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+16:05:08.936109 [debug] [Thread-1  ]: finished collecting timing info
+16:05:08.936309 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+16:05:08.976667 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+16:05:08.977415 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+16:05:08.978698 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	player1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	player2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3type,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from play_by_play;
+
+
+16:05:09.657642 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Table "play_by_play" must be qualified with a dataset (e.g. dataset.table).')
+16:05:10.879105 [debug] [Thread-1  ]: finished collecting timing info
+16:05:10.879506 [debug] [Thread-1  ]: Database Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)
+  Table "play_by_play" must be qualified with a dataset (e.g. dataset.table).
+  compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:05:10.879794 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e4bbd005-9b3b-4ff2-8dbb-08c350ff69ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110442a30>]}
+16:05:10.880145 [error] [Thread-1  ]: 1 of 1 ERROR creating view model nba.fct_play_by_play........................... [[31mERROR[0m in 1.95s]
+16:05:10.880482 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+16:05:10.881475 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:05:10.881803 [info ] [MainThread]: 
+16:05:10.882074 [info ] [MainThread]: Finished running 1 view model in 3.28s.
+16:05:10.882333 [debug] [MainThread]: Connection 'master' was properly closed.
+16:05:10.882469 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+16:05:10.887255 [info ] [MainThread]: 
+16:05:10.887590 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+16:05:10.887885 [info ] [MainThread]: 
+16:05:10.888133 [error] [MainThread]: [33mDatabase Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)[0m
+16:05:10.888380 [error] [MainThread]:   Table "play_by_play" must be qualified with a dataset (e.g. dataset.table).
+16:05:10.888608 [error] [MainThread]:   compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:05:10.888844 [info ] [MainThread]: 
+16:05:10.889081 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+16:05:10.889406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102e97f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1102e9dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110469940>]}
+
+
+============================== 2022-03-19 16:05:28.907066 | c67f2c27-4521-40bd-8dca-b6d7e16ca766 ==============================
+16:05:28.907066 [info ] [MainThread]: Running with dbt=1.0.4
+16:05:28.907643 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/gkaufman/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+16:05:28.907859 [debug] [MainThread]: Tracking: tracking
+16:05:28.920205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10834f670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10834f820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10834f970>]}
+16:05:28.952064 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+16:05:28.952501 [debug] [MainThread]: Partial parsing: updated file: nba://models/marts/fct_play_by_play.sql
+16:05:28.964578 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+16:05:28.989380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c67f2c27-4521-40bd-8dca-b6d7e16ca766', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b60d0>]}
+16:05:28.994139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c67f2c27-4521-40bd-8dca-b6d7e16ca766', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10840fb80>]}
+16:05:28.994392 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+16:05:28.995440 [info ] [MainThread]: 
+16:05:28.995879 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:05:28.996463 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+16:05:28.996636 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:05:29.694509 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+16:05:29.695033 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+16:05:30.358117 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+16:05:30.358596 [info ] [MainThread]: 
+16:05:30.362170 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+16:05:30.362503 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+16:05:30.363040 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+16:05:30.363239 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+16:05:30.363444 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+16:05:30.365067 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+16:05:30.365610 [debug] [Thread-1  ]: finished collecting timing info
+16:05:30.365821 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+16:05:30.402838 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+16:05:30.403440 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+16:05:30.404868 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	player1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	player2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3type,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from nba.play_by_play;
+
+
+16:05:31.582275 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: _id at [7:9]')
+16:05:32.913443 [debug] [Thread-1  ]: finished collecting timing info
+16:05:32.914134 [debug] [Thread-1  ]: Database Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)
+  Unrecognized name: _id at [7:9]
+  compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:05:32.915066 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c67f2c27-4521-40bd-8dca-b6d7e16ca766', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108582910>]}
+16:05:32.915672 [error] [Thread-1  ]: 1 of 1 ERROR creating view model nba.fct_play_by_play........................... [[31mERROR[0m in 2.55s]
+16:05:32.916246 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+16:05:32.917612 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:05:32.918059 [info ] [MainThread]: 
+16:05:32.918440 [info ] [MainThread]: Finished running 1 view model in 3.92s.
+16:05:32.918805 [debug] [MainThread]: Connection 'master' was properly closed.
+16:05:32.918998 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+16:05:32.924187 [info ] [MainThread]: 
+16:05:32.924504 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+16:05:32.924827 [info ] [MainThread]: 
+16:05:32.925109 [error] [MainThread]: [33mDatabase Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)[0m
+16:05:32.925387 [error] [MainThread]:   Unrecognized name: _id at [7:9]
+16:05:32.925650 [error] [MainThread]:   compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:05:32.925916 [info ] [MainThread]: 
+16:05:32.926188 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+16:05:32.926540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084576d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108457ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084c3520>]}
+
+
+============================== 2022-03-19 16:06:30.447771 | 38033c4f-578e-4cf5-aada-2b4f84848f97 ==============================
+16:06:30.447771 [info ] [MainThread]: Running with dbt=1.0.4
+16:06:30.448408 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/gkaufman/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+16:06:30.448676 [debug] [MainThread]: Tracking: tracking
+16:06:30.462165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2150a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2155e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e215130>]}
+16:06:30.492160 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+16:06:30.492448 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+16:06:30.497911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '38033c4f-578e-4cf5-aada-2b4f84848f97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3530d0>]}
+16:06:30.502647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '38033c4f-578e-4cf5-aada-2b4f84848f97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2e1100>]}
+16:06:30.502888 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+16:06:30.503945 [info ] [MainThread]: 
+16:06:30.504331 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:06:30.504934 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+16:06:30.505107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:06:31.158163 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+16:06:31.158595 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+16:06:31.754228 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+16:06:31.754639 [info ] [MainThread]: 
+16:06:31.758054 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+16:06:31.758402 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+16:06:31.758933 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+16:06:31.759120 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+16:06:31.759320 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+16:06:31.761089 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+16:06:31.761612 [debug] [Thread-1  ]: finished collecting timing info
+16:06:31.761825 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+16:06:31.801803 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+16:06:31.802344 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+16:06:31.803589 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	player1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	player2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3type,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from nba.play_by_play;
+
+
+16:06:32.872053 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: player1type at [10:9]')
+16:06:33.732574 [debug] [Thread-1  ]: finished collecting timing info
+16:06:33.733250 [debug] [Thread-1  ]: Database Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)
+  Unrecognized name: player1type at [10:9]
+  compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:06:33.733852 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '38033c4f-578e-4cf5-aada-2b4f84848f97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e414ca0>]}
+16:06:33.734454 [error] [Thread-1  ]: 1 of 1 ERROR creating view model nba.fct_play_by_play........................... [[31mERROR[0m in 1.98s]
+16:06:33.735033 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+16:06:33.736421 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:06:33.736867 [info ] [MainThread]: 
+16:06:33.737239 [info ] [MainThread]: Finished running 1 view model in 3.23s.
+16:06:33.737593 [debug] [MainThread]: Connection 'master' was properly closed.
+16:06:33.737786 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+16:06:33.743415 [info ] [MainThread]: 
+16:06:33.743775 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+16:06:33.744123 [info ] [MainThread]: 
+16:06:33.744422 [error] [MainThread]: [33mDatabase Error in model fct_play_by_play (models/marts/fct_play_by_play.sql)[0m
+16:06:33.744714 [error] [MainThread]:   Unrecognized name: player1type at [10:9]
+16:06:33.744984 [error] [MainThread]:   compiled SQL at target/run/nba/models/marts/fct_play_by_play.sql
+16:06:33.745264 [info ] [MainThread]: 
+16:06:33.745552 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+16:06:33.745921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e215940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e215ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e403070>]}
+
+
+============================== 2022-03-19 16:06:55.780850 | 7b9c634f-ac1c-465f-9264-6d157e672e55 ==============================
+16:06:55.780850 [info ] [MainThread]: Running with dbt=1.0.4
+16:06:55.781451 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/gkaufman/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+16:06:55.781685 [debug] [MainThread]: Tracking: tracking
+16:06:55.793816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109019190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109019610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109019070>]}
+16:06:55.824446 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+16:06:55.824907 [debug] [MainThread]: Partial parsing: updated file: nba://models/marts/fct_play_by_play.sql
+16:06:55.836395 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+16:06:55.861330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b9c634f-ac1c-465f-9264-6d157e672e55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091ad0d0>]}
+16:06:55.866062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b9c634f-ac1c-465f-9264-6d157e672e55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090162b0>]}
+16:06:55.866315 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+16:06:55.867328 [info ] [MainThread]: 
+16:06:55.867714 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:06:55.868383 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+16:06:55.868618 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:06:56.527363 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+16:06:56.527744 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+16:06:57.150422 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+16:06:57.150987 [info ] [MainThread]: 
+16:06:57.154690 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+16:06:57.155055 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+16:06:57.155609 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+16:06:57.155830 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+16:06:57.156034 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+16:06:57.157748 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+16:06:57.158284 [debug] [Thread-1  ]: finished collecting timing info
+16:06:57.158506 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+16:06:57.197036 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+16:06:57.197691 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+16:06:57.199104 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	person1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	person2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from nba.play_by_play;
+
+
+16:06:58.338446 [debug] [Thread-1  ]: finished collecting timing info
+16:06:58.338971 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b9c634f-ac1c-465f-9264-6d157e672e55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092592b0>]}
+16:06:58.339372 [info ] [Thread-1  ]: 1 of 1 OK created view model nba.fct_play_by_play............................... [[32mOK[0m in 1.18s]
+16:06:58.339757 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+16:06:58.340941 [debug] [MainThread]: Acquiring new bigquery connection "master"
+16:06:58.341336 [info ] [MainThread]: 
+16:06:58.341674 [info ] [MainThread]: Finished running 1 view model in 2.47s.
+16:06:58.341981 [debug] [MainThread]: Connection 'master' was properly closed.
+16:06:58.342145 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+16:06:58.350237 [info ] [MainThread]: 
+16:06:58.350588 [info ] [MainThread]: [32mCompleted successfully[0m
+16:06:58.350921 [info ] [MainThread]: 
+16:06:58.351196 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+16:06:58.351552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10911b1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090e5ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109019190>]}
+
+
+============================== 2022-03-19 21:01:52.609217 | d05515a0-ee9e-45a4-a418-589fad1cca0e ==============================
+21:01:52.609217 [info ] [MainThread]: Running with dbt=1.0.0
+21:01:52.610501 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+21:01:52.611775 [debug] [MainThread]: Tracking: tracking
+21:01:52.616951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d00b1790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d00b1670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d00b16d0>]}
+21:01:52.651796 [info ] [MainThread]: Unable to do partial parsing because of a dbt version mismatch. Saved manifest version: 1.0.4. Current version: 1.0.0.
+21:01:52.653632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd05515a0-ee9e-45a4-a418-589fad1cca0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d21bc5b0>]}
+21:01:52.705216 [debug] [MainThread]: Parsing macros/catalog.sql
+21:01:52.720363 [debug] [MainThread]: Parsing macros/etc.sql
+21:01:52.724273 [debug] [MainThread]: Parsing macros/adapters.sql
+21:01:52.764365 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:01:52.787449 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:01:52.795359 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:01:52.800615 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:01:52.804994 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:01:52.808258 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+21:01:52.813541 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:01:52.827951 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:01:52.835246 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:01:52.850498 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:01:52.854924 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:01:52.860607 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:01:52.865364 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:01:52.873208 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:01:52.889392 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:01:52.901649 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:01:52.908069 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:01:52.912495 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:01:52.940773 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:01:52.953503 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:01:52.959573 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:01:52.974766 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:01:53.024163 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:01:53.029882 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:01:53.045676 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:01:53.052468 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:01:53.072917 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:01:53.077241 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:01:53.103191 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:01:53.140054 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:01:53.152838 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:01:53.157048 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:01:53.161003 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:01:53.169324 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:01:53.188964 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:01:53.207528 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:01:53.233122 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:01:53.236882 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:01:53.238823 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:01:53.240885 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:01:53.243400 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:01:53.245294 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:01:53.247941 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:01:53.251943 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:01:53.254928 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:01:53.498811 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+21:01:53.555681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd05515a0-ee9e-45a4-a418-589fad1cca0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d000dc70>]}
+21:01:53.570756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd05515a0-ee9e-45a4-a418-589fad1cca0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98d000dc40>]}
+21:01:53.572055 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:01:53.574624 [info ] [MainThread]: 
+21:01:53.576018 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:01:53.577728 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+21:01:53.578687 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:01:53.579658 [debug] [ThreadPool]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/Users/gkaufman/dbt-user-bq-creds.json''
+21:01:53.580947 [debug] [MainThread]: Connection 'master' was properly closed.
+21:01:53.582036 [debug] [MainThread]: Connection 'list_geoff-kaufman' was properly closed.
+21:01:53.583805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cf37c910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cf37c640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98cf37ca30>]}
+
+
+============================== 2022-03-19 21:04:36.882991 | 95f43fdf-909c-488f-877a-50c64b0f807c ==============================
+21:04:36.882991 [info ] [MainThread]: Running with dbt=1.0.0
+21:04:36.884659 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+21:04:36.886040 [debug] [MainThread]: Tracking: tracking
+21:04:36.892670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c75950790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c75950670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c759506d0>]}
+21:04:36.934105 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+21:04:36.936104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '95f43fdf-909c-488f-877a-50c64b0f807c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c77a59d00>]}
+21:04:36.977452 [debug] [MainThread]: Parsing macros/catalog.sql
+21:04:36.992151 [debug] [MainThread]: Parsing macros/etc.sql
+21:04:36.996455 [debug] [MainThread]: Parsing macros/adapters.sql
+21:04:37.033425 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:04:37.056896 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:04:37.064692 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:04:37.069846 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:04:37.074557 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:04:37.077988 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+21:04:37.082535 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:04:37.096066 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:04:37.103798 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:04:37.119317 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:04:37.123808 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:04:37.129191 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:04:37.133933 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:04:37.141318 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:04:37.157235 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:04:37.169782 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:04:37.176645 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:04:37.181326 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:04:37.211676 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:04:37.225590 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:04:37.232456 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:04:37.247668 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:04:37.251637 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:04:37.256973 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:04:37.272430 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:04:37.279006 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:04:37.299742 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:04:37.304266 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:04:37.330187 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:04:37.366763 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:04:37.376637 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:04:37.381234 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:04:37.385955 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:04:37.396975 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:04:37.424038 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:04:37.448552 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:04:37.475843 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:04:37.480531 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:04:37.482330 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:04:37.484508 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:04:37.487284 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:04:37.489325 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:04:37.492056 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:04:37.496207 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:04:37.499238 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:04:37.806983 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+21:04:37.858349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '95f43fdf-909c-488f-877a-50c64b0f807c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c758be0d0>]}
+21:04:37.871267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '95f43fdf-909c-488f-877a-50c64b0f807c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c758be4c0>]}
+21:04:37.872546 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:04:37.874706 [info ] [MainThread]: 
+21:04:37.876197 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:04:37.878700 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+21:04:37.880935 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:04:37.882465 [debug] [ThreadPool]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/root/dbt-user-bq-creds.json''
+21:04:37.884739 [debug] [MainThread]: Connection 'master' was properly closed.
+21:04:37.885809 [debug] [MainThread]: Connection 'list_geoff-kaufman' was properly closed.
+21:04:37.887496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c75a02d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c759a6730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0c75985490>]}
+
+
+============================== 2022-03-19 21:05:08.506076 | c22d3fd5-f43c-4e1d-a498-b6e85068dcbb ==============================
+21:05:08.506076 [info ] [MainThread]: Running with dbt=1.0.0
+21:05:08.507336 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+21:05:08.508263 [debug] [MainThread]: Tracking: tracking
+21:05:08.513249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21e7d790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21e7d670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21e7d6d0>]}
+21:05:08.539981 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+21:05:08.541861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c22d3fd5-f43c-4e1d-a498-b6e85068dcbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d23f86610>]}
+21:05:08.573278 [debug] [MainThread]: Parsing macros/catalog.sql
+21:05:08.586716 [debug] [MainThread]: Parsing macros/etc.sql
+21:05:08.591220 [debug] [MainThread]: Parsing macros/adapters.sql
+21:05:08.627346 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:05:08.652361 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:05:08.659760 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:05:08.664576 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:05:08.670720 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:05:08.674012 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+21:05:08.678165 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:05:08.692092 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:05:08.702323 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:05:08.717206 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:05:08.721374 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:05:08.730210 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:05:08.735148 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:05:08.746025 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:05:08.761387 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:05:08.774593 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:05:08.780840 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:05:08.786008 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:05:08.813306 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:05:08.826392 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:05:08.831386 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:05:08.843169 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:05:08.845990 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:05:08.849976 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:05:08.861418 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:05:08.866283 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:05:08.881139 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:05:08.884285 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:05:08.903101 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:05:08.930299 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:05:08.937386 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:05:08.940920 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:05:08.944413 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:05:08.951679 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:05:08.973832 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:05:08.993297 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:05:09.017640 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:05:09.021148 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:05:09.023586 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:05:09.025400 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:05:09.027935 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:05:09.029887 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:05:09.032462 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:05:09.036321 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:05:09.039208 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:05:09.279367 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+21:05:09.334755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c22d3fd5-f43c-4e1d-a498-b6e85068dcbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d211640d0>]}
+21:05:09.348792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c22d3fd5-f43c-4e1d-a498-b6e85068dcbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d211644c0>]}
+21:05:09.350016 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:05:09.351975 [info ] [MainThread]: 
+21:05:09.353534 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:05:09.355253 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+21:05:09.356614 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:05:10.036187 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+21:05:10.038705 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:05:10.643499 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:05:10.645409 [info ] [MainThread]: 
+21:05:10.663219 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+21:05:10.665164 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+21:05:10.666933 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+21:05:10.667994 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+21:05:10.668948 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+21:05:10.671265 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+21:05:10.676593 [debug] [Thread-1  ]: finished collecting timing info
+21:05:10.677578 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+21:05:10.726620 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+21:05:10.734095 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:05:10.739121 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.0", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	person1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	person2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from nba.play_by_play;
+
+
+21:05:11.955388 [debug] [Thread-1  ]: finished collecting timing info
+21:05:11.957989 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c22d3fd5-f43c-4e1d-a498-b6e85068dcbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2089feb0>]}
+21:05:11.959771 [info ] [Thread-1  ]: 1 of 1 OK created view model nba.fct_play_by_play............................... [[32mOK[0m in 1.29s]
+21:05:11.961389 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+21:05:11.964666 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:05:11.966219 [info ] [MainThread]: 
+21:05:11.967971 [info ] [MainThread]: Finished running 1 view model in 2.61s.
+21:05:11.971346 [debug] [MainThread]: Connection 'master' was properly closed.
+21:05:11.973174 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+21:05:11.991391 [info ] [MainThread]: 
+21:05:11.993021 [info ] [MainThread]: [32mCompleted successfully[0m
+21:05:11.994790 [info ] [MainThread]: 
+21:05:11.996275 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+21:05:11.998295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d208a6f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d208a6f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d208a6d00>]}
+
+
+============================== 2022-03-19 21:31:03.502811 | c6faf1af-4c3f-4806-9580-92b98907add3 ==============================
+21:31:03.502811 [info ] [MainThread]: Running with dbt=1.0.4
+21:31:03.504385 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.seed.SeedTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/opt/.dbt', project_dir='/opt/dbt', record_timing_info=None, rpc_method='seed', select=None, selector_name=None, send_anonymous_usage_stats=None, show=False, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='seed', write_json=None)
+21:31:03.505990 [debug] [MainThread]: Tracking: tracking
+21:31:03.516523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae577dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae577f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae577d90>]}
+21:31:03.551651 [info ] [MainThread]: Unable to do partial parsing because of a dbt version mismatch. Saved manifest version: 1.0.0. Current version: 1.0.4.
+21:31:03.554100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c6faf1af-4c3f-4806-9580-92b98907add3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae4caed0>]}
+21:31:03.603678 [debug] [MainThread]: Parsing macros/catalog.sql
+21:31:03.619469 [debug] [MainThread]: Parsing macros/etc.sql
+21:31:03.623996 [debug] [MainThread]: Parsing macros/adapters.sql
+21:31:03.666694 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:31:03.693662 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:31:03.701780 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:31:03.707174 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:31:03.712664 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:31:03.716645 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+21:31:03.722292 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:31:03.739498 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:31:03.748925 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:31:03.767457 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:31:03.772074 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:31:03.777946 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:31:03.783301 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:31:03.790678 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:31:03.807238 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:31:03.835339 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:31:03.842996 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:31:03.847501 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:31:03.880319 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:31:03.894136 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:31:03.900681 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:31:03.915067 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:31:03.918384 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:31:03.923125 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:31:03.936888 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:31:03.942254 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:31:03.958976 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:31:03.963811 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:31:03.984261 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:31:04.022370 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:31:04.032009 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:31:04.035702 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:31:04.039263 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:31:04.047509 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:31:04.068368 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:31:04.089239 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:31:04.117746 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:31:04.122279 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:31:04.124213 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:31:04.126527 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:31:04.129830 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:31:04.132400 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:31:04.136161 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:31:04.140400 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:31:04.143688 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:31:04.491149 [debug] [MainThread]: 1699: static parser successfully parsed marts/fct_play_by_play.sql
+21:31:04.548096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c6faf1af-4c3f-4806-9580-92b98907add3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae522710>]}
+21:31:04.562446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c6faf1af-4c3f-4806-9580-92b98907add3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae5222d0>]}
+21:31:04.563822 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:31:04.566047 [info ] [MainThread]: 
+21:31:04.567361 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+21:31:04.578786 [info ] [MainThread]: 
+21:31:04.580292 [info ] [MainThread]: [32mCompleted successfully[0m
+21:31:04.581675 [info ] [MainThread]: 
+21:31:04.583216 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 TOTAL=0
+21:31:04.584984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cc1ef3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae522a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9cae522790>]}
+
+
+============================== 2022-03-19 21:31:09.456142 | 63afc1b2-d1e8-43b4-81a1-ccfb8ab693c8 ==============================
+21:31:09.456142 [info ] [MainThread]: Running with dbt=1.0.4
+21:31:09.457226 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/opt/.dbt', project_dir='/opt/dbt', record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+21:31:09.458763 [debug] [MainThread]: Tracking: tracking
+21:31:09.473469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fb6243e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fb6237bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fb6237a50>]}
+21:31:09.527246 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:31:09.529160 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:31:09.537982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63afc1b2-d1e8-43b4-81a1-ccfb8ab693c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fca4532d0>]}
+21:31:09.552499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63afc1b2-d1e8-43b4-81a1-ccfb8ab693c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fb61fa210>]}
+21:31:09.554154 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:31:09.557357 [info ] [MainThread]: 
+21:31:09.561227 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:31:09.565111 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+21:31:09.566817 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:31:09.571330 [debug] [ThreadPool]: BigQuery adapter: Got an error when attempting to create a bigquery client: 'Expecting value: line 1 column 1 (char 0)'
+21:31:09.574181 [debug] [MainThread]: Connection 'master' was properly closed.
+21:31:09.575813 [debug] [MainThread]: Connection 'list_geoff-kaufman' was properly closed.
+21:31:09.579156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fcf40fb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fca468690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fca468a90>]}
+
+
+============================== 2022-03-19 21:33:10.454589 | 3a425459-785a-407e-aa49-39836f6d760e ==============================
+21:33:10.454589 [info ] [MainThread]: Running with dbt=1.0.4
+21:33:10.456918 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.seed.SeedTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/opt/.dbt', project_dir='/opt/dbt', record_timing_info=None, rpc_method='seed', select=None, selector_name=None, send_anonymous_usage_stats=None, show=False, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='seed', write_json=None)
+21:33:10.458491 [debug] [MainThread]: Tracking: tracking
+21:33:10.467619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f325f52be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3265c75190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3265c71fd0>]}
+21:33:10.513452 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:33:10.515649 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:33:10.525841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3a425459-785a-407e-aa49-39836f6d760e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3277755350>]}
+21:33:10.541858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3a425459-785a-407e-aa49-39836f6d760e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f325f4f4c50>]}
+21:33:10.543243 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:33:10.545423 [info ] [MainThread]: 
+21:33:10.546690 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+21:33:10.555930 [info ] [MainThread]: 
+21:33:10.557269 [info ] [MainThread]: [32mCompleted successfully[0m
+21:33:10.558626 [info ] [MainThread]: 
+21:33:10.559880 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 TOTAL=0
+21:33:10.561285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3265c75190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f325f501fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f325f501950>]}
+
+
+============================== 2022-03-19 21:33:15.613534 | 3ce1325e-e08a-4f57-9e4b-0a49d71c8d30 ==============================
+21:33:15.613534 [info ] [MainThread]: Running with dbt=1.0.4
+21:33:15.615535 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/opt/.dbt', project_dir='/opt/dbt', record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+21:33:15.617141 [debug] [MainThread]: Tracking: tracking
+21:33:15.627118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc49a16f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc4a419490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc49f77390>]}
+21:33:15.667956 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:33:15.669973 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:33:15.677753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3ce1325e-e08a-4f57-9e4b-0a49d71c8d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc5dc0abd0>]}
+21:33:15.691272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3ce1325e-e08a-4f57-9e4b-0a49d71c8d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc499ce610>]}
+21:33:15.693259 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:33:15.696790 [info ] [MainThread]: 
+21:33:15.698616 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:33:15.700598 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman"
+21:33:15.701734 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:33:16.384075 [debug] [ThreadPool]: Acquiring new bigquery connection "list_geoff-kaufman_nba"
+21:33:16.394451 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:33:16.990453 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:33:16.992617 [info ] [MainThread]: 
+21:33:17.001321 [debug] [Thread-1  ]: Began running node model.nba.fct_play_by_play
+21:33:17.002781 [info ] [Thread-1  ]: 1 of 1 START view model nba.fct_play_by_play.................................... [RUN]
+21:33:17.004306 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.nba.fct_play_by_play"
+21:33:17.005283 [debug] [Thread-1  ]: Began compiling node model.nba.fct_play_by_play
+21:33:17.006262 [debug] [Thread-1  ]: Compiling model.nba.fct_play_by_play
+21:33:17.008823 [debug] [Thread-1  ]: Writing injected SQL for node "model.nba.fct_play_by_play"
+21:33:17.014491 [debug] [Thread-1  ]: finished collecting timing info
+21:33:17.015948 [debug] [Thread-1  ]: Began executing node model.nba.fct_play_by_play
+21:33:17.055678 [debug] [Thread-1  ]: Writing runtime SQL for node "model.nba.fct_play_by_play"
+21:33:17.061809 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:33:17.066870 [debug] [Thread-1  ]: On model.nba.fct_play_by_play: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "geoff_bq", "target_name": "dev", "node_id": "model.nba.fct_play_by_play"} */
+
+
+  create or replace view `geoff-kaufman`.`nba`.`fct_play_by_play`
+  OPTIONS()
+  as select
+	_id,
+	game_id,
+	player1_id,
+	person1type,
+	player1_name,
+	player1_team_nickname,
+	player1_team_id,
+	player2_id,
+	person2type,
+	player2_name,
+	player2_team_nickname,
+	player2_team_id,
+	player3_id,
+	player3_name,
+	player3_team_nickname,
+	player3_team_id,
+	score,
+	scoremargin,
+	period,
+	pctimestring,
+	eventnum,
+	eventmsgtype,
+	homedescription,
+	visitordescription
+from nba.play_by_play;
+
+
+21:33:18.356902 [debug] [Thread-1  ]: finished collecting timing info
+21:33:18.359122 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ce1325e-e08a-4f57-9e4b-0a49d71c8d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc5db95e90>]}
+21:33:18.360721 [info ] [Thread-1  ]: 1 of 1 OK created view model nba.fct_play_by_play............................... [[32mOK[0m in 1.35s]
+21:33:18.362422 [debug] [Thread-1  ]: Finished running node model.nba.fct_play_by_play
+21:33:18.406183 [debug] [MainThread]: Acquiring new bigquery connection "master"
+21:33:18.408561 [info ] [MainThread]: 
+21:33:18.410082 [info ] [MainThread]: Finished running 1 view model in 2.71s.
+21:33:18.411401 [debug] [MainThread]: Connection 'master' was properly closed.
+21:33:18.412322 [debug] [MainThread]: Connection 'list_geoff-kaufman' was properly closed.
+21:33:18.413275 [debug] [MainThread]: Connection 'model.nba.fct_play_by_play' was properly closed.
+21:33:18.422316 [info ] [MainThread]: 
+21:33:18.423577 [info ] [MainThread]: [32mCompleted successfully[0m
+21:33:18.425006 [info ] [MainThread]: 
+21:33:18.426286 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+21:33:18.427545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc49a0dc90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc5d998d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc49dcae90>]}
+
+
+============================== 2022-03-19 21:33:23.583042 | 55b67d67-7f66-44b1-95ae-29306484ea38 ==============================
+21:33:23.583042 [info ] [MainThread]: Running with dbt=1.0.4
+21:33:23.584421 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.test.TestTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, indirect_selection='eager', log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/opt/.dbt', project_dir='/opt/dbt', record_timing_info=None, rpc_method='test', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, store_failures=False, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='test', write_json=None)
+21:33:23.585683 [debug] [MainThread]: Tracking: tracking
+21:33:23.594789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6b51190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6b51a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6b51310>]}
+21:33:23.635472 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:33:23.636985 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:33:23.645012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '55b67d67-7f66-44b1-95ae-29306484ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eed292710>]}
+21:33:23.656428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '55b67d67-7f66-44b1-95ae-29306484ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6b16a50>]}
+21:33:23.657651 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:33:23.659776 [info ] [MainThread]: 
+21:33:23.661199 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+21:33:23.670005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6b9bd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eed2aba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee6bb1d10>]}
